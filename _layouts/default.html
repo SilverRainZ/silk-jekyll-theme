@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<!-- 外部样式 -->
+<link type="text/css" rel="stylesheet" href="/assets/default.css">
+<link rel="shortcut icon" href="{{ site.avatar }}">
+<script src="/assets/script.js"></script>
+
+<title>{{ page.title }} | {{ site.name }} </title>
+</head>
+<body>
+<!-- 侧边栏 -->
+<div class="sidebar">
+    <a href="/">
+        <img id="avatar" width="80" height="80" style="border-radius: 50%" src="{{ site.avatar }}">
+    </a>
+    <h2><a href="/">谷月轩</a></h2>
+    <p> {{ site.description }}</p>
+    <ul>
+        <li><a href="/">时间线</a></li>
+        <li><a href="/archives.html">归档</a></li>
+        <li><a href="/tags.html">标签</a></li>
+        <li><a href="/links.html">链接</a></li>
+        <li><a href="/projects.html">项目</a></li>
+        <li><a href="/about.html">关于</a></li>
+        <li><a href="/feed.xml">订阅</a></li>
+    </ul>
+</div>
+<!-- 侧边栏结束 -->
+<!-- 主体 -->
+<div class="postlist">
+    {{ content }}
+</div>
+<!-- 主体结束 -->
+<!-- 页脚 -->
+<div class="footer">
+    {{ site.time | date:"%Y" }} © <a href="/">LastAvengers</a> | Powered by <a href="http://jekyllrb.com/">Jekyll</a>
+</div>
+</body>
+<!-- 页脚结束 -->
+<!-- gostats 统计 -->
+{% include blog-stat %}
+<script> listenallimg(); </script>
+</html>
